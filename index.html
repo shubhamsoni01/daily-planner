@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="main">
+    <nav>
+
+    </nav>
+    <section class="allElems">
+      <header>
+        <h1 class="brand-title">Built by <span class="highlight">Shubham</span></h1>
+        <div id="date-time-info">
+          <h2 id="current-time">00:00:00</h2>
+          <p id="current-date">Loading date...</p>
+        </div>
+        <div id="weather-info">Loading weather...</div>
+      </header>
+
+      <div class="allFeatures">
+        <div class="todo elem" id="0">
+        <img
+          src="./to do list1.avif"
+          alt="">
+        <h2> To Do List</h2>
+      </div>
+      <div class="daily elem " id="1">
+        <img
+          src="./daily planner.jpg"
+          alt="">
+        <h2>Daily Planner</h2>
+      </div>
+      <div class="moti elem" id="2">
+        <img
+          src="./notivation.jpg"
+          alt="">
+        <h2> Motivation</h2>
+      </div>
+      <div class="pomo elem" id="3">
+        <img
+          src="./timmer.jpg"
+          alt="">
+        <h2> Pomodoro Timmer</h2>
+      </div>
+      <div class="goals elem" id="4">
+        <img
+          src="./daily goals.jpg"
+          alt="">
+        <h2> Daily Goals</h2>
+      </div>
+      </div>
+    </section>
+    <section class="fullElem todo-list-fullpage">
+      <button class="back" id="0">close</i></button>
+
+      <h2>Your Personalised Task List</h2>
+      <div class="progress-container">
+        <div class="progress-bar" id="task-progress"></div>
+      </div>
+      <p id="progress-text">0% Completed</p>
+      <div class="day-planner-time">
+        
+      </div>
+
+      <div class="todo-container">
+        <div class="addTask">
+          <form action="">
+            <!-- <h3>Add Task</h3> -->
+            <input id="task-input" type="text" placeholder="Enter Task">
+            <textarea placeholder="Enter Details" name="" id=""></textarea>
+            <div class="mark-imp">
+              <input type="checkbox" name="" id="check">
+              <label for="check">Mark as Important!</label>
+            </div>
+            <button>Add Task</button>
+          </form>
+        </div>
+        <div class="allTask">
+
+        </div>
+      </div>
+    </section>
+    <section class="fullElem daily-planner-fullpage ">
+      <button class="back" id="1">close</button>
+
+      <h2>Plan your Day to be more Productive</h2>
+      <p id="planner-date" class="planner-date">Loading date...</p>
+     <div class="day-planner">
+       <div class="day-planner-time">
+         <p>06:00-07:00 AM &nbsp;&nbsp;</p>
+         <input type="text" placeholder="...">
+       </div>
+        <div class="day-planner-time">
+         <p>06:00 AM &nbsp;&nbsp;</p>
+         <input type="text" placeholder="...">
+       </div>
+     </div>
+    </section>
+    <section class="fullElem motivational-fullpage">
+      <button class="back" id="2">close</i></button>
+      <div class="motivation-container">
+        <div class="motivation-wrapper">
+          <img src="./icons8-quote-100.png" alt="">
+        </div>
+        <div class="motivation1">
+          <h2>Quote of the day</h2>
+        </div>
+        <div class="motivation2">
+          <h2></h2>
+        </div>
+        <div class="motivation3">
+          <h1></h1>
+        </div>
+      </div>
+     
+    </section>
+    <section class="fullElem pomodoro-fullpage">
+      <button class="back" id="3">close</button>
+
+      <div class="pomo-timer">
+        <h2>Study with Me!</h2>
+        <h4 class="session">Focus Time</h4>
+        
+        <h1>00:00</h1>
+        
+        <div class="timer-input-section">
+          <p>Enter Duration (Min & Sec)</p>
+          <input type="number" id="custom-time-input" placeholder="Min" min="0">
+          <input type="number" id="custom-sec-input" placeholder="Sec" min="0" max="59">
+        </div>
+        <button class="start-timer">start</button>
+        <button class="pause-timer">pause</button>
+        <button class="reset-timer">reset</button>
+      </div>
+    </section>
+    <section class="fullElem daily-goals-fullpage">
+      <button class="back" id="4">close</button>
+
+      <div class="goals-header">
+        <h2>Daily Goals</h2>
+        <button class="add-note-btn" title="Add Sticky Note"><i class="ri-add-line"></i></button>
+      </div>
+      <div class="notes-container">
+        <!-- Notes will be added here via JS -->
+      </div>
+    </section>
+  </div>
+
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Dark/Light Mode">
+    <i class="ri-sun-line"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1113 @@
+:root {
+    --pri: #C08552;
+    --sec: #FFF8F0;
+    --tri1: #8C5A3C;
+    --tri2: #4B2E2B;
+    --tri3: #1b5e20;
+    
+}
+
+@font-face {
+    font-family: light;
+    src: url(./AeonikTRIAL-Light.otf);
+}
+
+@font-face {
+    font-family: normal;
+    src: url(./AeonikTRIAL-Regular.otf);
+}
+
+@font-face {
+    font-family: bold;
+    src: url(./AeonikTRIAL-Bold.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: normal;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: var(--sec);
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: var(--tri1);
+}
+
+section.allElems {
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    /* padding-top: 80px; */
+    background: linear-gradient(-45deg, #1c1c1c, #3a3a3a, #111111, #2b1c15);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    /* display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px; */
+    position: absolute;
+    overflow: auto;
+}
+.allElems header{
+    height: 300px;
+    width: 100%;
+    background-color: var(--tri1);
+    margin-bottom: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    position: relative;
+}
+.brand-title {
+    font-size: 55px;
+    font-family: 'bold', sans-serif;
+    color: var(--sec);
+    letter-spacing: 2px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.brand-title .highlight {
+    color: #FFD700; /* Attractive Golden Color */
+    font-family: 'bold', sans-serif;
+    font-style: italic;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    animation: textGlow 2s infinite ease-in-out;
+}
+#date-time-info {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.2) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 25px 50px;
+    border-radius: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+#date-time-info h2 {
+    font-size: 70px;
+    margin-bottom: 8px;
+    letter-spacing: 3px;
+    color: #FFD700;
+    text-shadow: 0px 4px 15px rgba(255, 215, 0, 0.4);
+}
+#date-time-info p {
+    font-size: 22px;
+    color: var(--sec);
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+#weather-info {
+    text-align: right;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 15px;
+    height: fit-content;
+}
+#weather-info h3 {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+.allElems .allFeatures{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+ display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.elem {
+    background-color: var(--sec);
+    position: relative;
+    font-size: 30px;
+    height: 280px;
+    width: 100%;
+    height: 250px;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    box-shadow: 0 5px 20px var(--pri);
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.elem:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.elem h2 {
+    position: absolute;
+    bottom: 5%;
+    bottom: 4%;
+    right: 5%;
+    font-weight: 600;
+    font-weight: 500;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.elem:active {
+    scale: 0.97;
+}
+
+.elem:nth-child(1) { animation-delay: 0.1s; }
+.elem:nth-child(2) { animation-delay: 0.2s; }
+.elem:nth-child(3) { animation-delay: 0.3s; }
+.elem:nth-child(4) { animation-delay: 0.4s; }
+.elem:nth-child(5) { animation-delay: 0.5s; }
+
+.fullElem {
+    height: 100%;
+    width: 100%;
+    background-color: var(--tri2);
+    padding: 40px;
+    display: none;
+    position: absolute;
+    animation: popIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.back {
+    position: absolute;
+    top: 30px;
+    right: 5%;
+    z-index: 1000;
+    background-color: #8b2020;
+    border-radius: 10%;
+    padding: 10px 11px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back:hover {
+    background-color: #ff3333;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.back:active {
+    scale: 0.97;
+}
+
+.todo-list-fullpage {
+    /* JS handle karega, yahan se display: block hata diya gaya hai */
+    background: linear-gradient(135deg, #141E30 0%, #243B55 100%);
+}
+
+.todo-list-fullpage h2 {
+    font-size: 70px;
+}
+
+/* ===== Progress Bar (Glassmorphism & Animation) ===== */
+.progress-container {
+    width: 100%;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 15px 0 5px 0;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 10px;
+}
+#progress-text {
+    font-size: 18px;
+    color: var(--sec);
+    text-align: right;
+    font-weight: 600;
+}
+
+.todo-list-fullpage .todo-container {
+    height: 80%;
+    width: 100%;
+
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-list-fullpage .todo-container .addTask {
+    width: 33%;
+    background-color: var(--pri);
+    height: 100%;
+    border-radius: 20px;
+}
+
+.todo-list-fullpage .todo-container .allTask {
+    width: 65%;
+    background-color: var(--pri);
+    height: 100%;
+    border-radius: 20px;
+}
+
+.todo-list-fullpage .todo-container .addTask form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.todo-list-fullpage .todo-container .addTask form input#task-input {
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    outline: none;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.todo-list-fullpage .todo-container .addTask form textarea {
+    padding: 10px 20px;
+    width: 100%;
+    height: 150px;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    outline: none;
+    resize: none;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.todo-list-fullpage .todo-container .addTask form input#task-input:focus,
+.todo-list-fullpage .todo-container .addTask form textarea:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.todo-list-fullpage .todo-container .addTask form button {
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 25px;
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    font-weight: 600;
+    transition: all ease 0.3s;
+}
+
+.todo-list-fullpage .todo-container .addTask form button:hover {
+    background: linear-gradient(135deg, #0072ff 0%, #00c6ff 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 198, 255, 0.4);
+}
+
+.todo-list-fullpage .todo-container .addTask form button:active {
+    scale: 0.95;
+}
+
+.todo-list-fullpage .todo-container .allTask {
+    width: 65%;
+    background-color: var(--pri);
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    overflow: auto;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    animation: slideInRight 0.4s ease forwards;
+}
+
+.task:hover {
+    transform: translateX(10px);
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.task h5 {
+    font-size: 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+.task.completed h5 {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.task h5 span {
+    background-color: var(--tri3);
+    font-size: 10px;
+    color: var(--tri2);
+    color: var(--sec);
+    padding: 4px 6px;
+    border-radius: 50px;
+    font-size: 11px;
+}
+
+.task h5 span.true {
+    opacity: 1;
+}
+
+.task h5 span.false{
+    opacity: 0;
+} 
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+.task-actions button {
+    padding: 10px 15px;
+    font-size: 22px;
+    color: var(--sec);
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-complete { background: rgba(46, 204, 113, 0.7); backdrop-filter: blur(5px); }
+.btn-complete:hover { background: rgba(46, 204, 113, 1); transform: scale(1.1); box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4); }
+.btn-delete { background: rgba(231, 76, 60, 0.7); backdrop-filter: blur(5px); }
+.btn-delete:hover { background: rgba(231, 76, 60, 1); transform: scale(1.1); box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4); }
+.task-actions button:active { transform: scale(0.9); }
+
+.mark-imp {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0px;
+    /* background-color: red; */
+    margin-bottom: 20px;
+    width: 100%;
+    gap: 30px;
+}
+
+.mark-imp input {
+    /* width: 30px; */
+    font-size: 70px;
+}
+
+.mark-imp input {
+    width: 30px;
+    scale: 2;
+}
+
+.mark-imp label {
+    font-size: 20px;
+    color: var(--sec);
+}
+
+
+
+
+
+.daily-planner-fullpage{
+    /* JS handle karega, yahan se display: block hata diya gaya hai */
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+}
+.daily-planner-fullpage h2{
+font-size: 50px;
+}
+.planner-date {
+    font-size: 22px;
+    color: var(--sec);
+    opacity: 0.9;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+.daily-planner-fullpage .day-planner{
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    height: 85%;
+    margin-top: 40px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow: auto;
+   
+}
+.daily-planner-fullpage .day-planner .day-planner-time{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 49%;
+    margin-bottom: 10px;
+}
+.daily-planner-fullpage .day-planner .day-planner-time p{
+    position: absolute;
+    top: 10%;
+    left: 1%;
+    font-size: 18px;
+    
+}
+.daily-planner-fullpage .day-planner .day-planner-time input{
+    padding: 20px 40px;
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #fff;
+    outline: none;
+    font-size: 30px;
+    padding-top: 30px;
+    transition: all 0.3s ease;
+}
+.daily-planner-fullpage .day-planner .day-planner-time input:focus {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+.motivational-fullpage {
+}
+/* ===== Motivation Section Premium Glassmorphism Styling ===== */
+.motivation-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 8px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 50px 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'normal', sans-serif;
+    transition: all 0.4s ease;
+}
+
+.motivation-wrapper {
+    position: absolute;
+    top: -30px;
+    left: 40px;
+    background: transparent;
+}
+
+.motivation-wrapper img {
+    width: 60px;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    drop-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.motivation1 {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.motivation1 h2 {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.motivation2 {
+    text-align: left;
+    padding: 10px 0;
+}
+
+.motivation2 h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    font-style: italic;
+    line-height: 1.5;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-family: 'bold', sans-serif;
+}
+
+.motivation3 {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.motivation3 h1 {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.motivation3 h1::before {
+    content: "— ";
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.pomodoro-fullpage {
+    position: relative;
+    background: linear-gradient(135deg, #122514 0%, #103526 100%);
+}
+
+.pomodoro-fullpage h2 {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ffffff;
+    font-family: 'bold', sans-serif;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+}
+
+.pomodoro-fullpage .pomo-timer {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+background: rgba(255, 255, 255, 0.15);
+backdrop-filter: blur(20px);
+padding: 50px 70px;
+border-radius: 40px;
+border: 1px solid rgba(255, 255, 255, 0.3);
+box-shadow: 0 20px 50px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.1);
+text-align: center;
+width: 100%;
+max-width: 650px;
+}
+.timer-input-section {
+    margin-bottom: 20px;
+}
+.timer-input-section p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--sec);
+    font-weight: 500;
+}
+.pomo-timer input[type="number"] {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90px;
+    margin: 0 5px 10px 5px;
+    transition: all 0.3s ease;
+}
+.pomo-timer input[type="number"]:focus {
+    background-color: rgba(255,255,255,0.15);
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    transform: scale(1.05);
+}
+.pomo-timer h1{
+    font-size: 150px;
+    font-weight: bold;
+    text-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    margin: 15px 0;
+    font-family: 'bold', sans-serif;
+}
+.pomo-timer button{
+    background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.05) 100%);
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s;
+}
+.pomo-timer button:hover{
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+.pomo-timer button:active{
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transform: translateY(1px);
+}
+.pomodoro-fullpage .session{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 25px;
+    font-size: 22px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Background for Daily Goals */
+.daily-goals-fullpage {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+}
+/* ===== Daily Goals (Sticky Notes) Styling ===== */
+.goals-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.goals-header h2 {
+    font-size: 50px;
+}
+.add-note-btn {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    font-size: 35px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-note-btn:hover {
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 8px 20px rgba(17, 153, 142, 0.6);
+}
+.add-note-btn:active {
+    transform: scale(0.9);
+}
+.notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    overflow-y: auto;
+    height: 80%;
+    padding: 10px;
+}
+.sticky-note {
+    width: 250px;
+    height: 250px;
+    border-radius: 2px 15px 15px 20px; /* Thoda realistic paper shape */
+    padding: 30px 20px 20px 20px;
+    position: relative;
+    box-shadow: 3px 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    transform: rotate(var(--rot, 0deg)); /* Har note alag angle par ghuma hoga */
+}
+/* Sticky Note ke upar Cello Tape ka design */
+.sticky-note::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 80px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+.sticky-note:hover {
+    transform: rotate(var(--rot, 0deg)) translateY(-5px) scale(1.05);
+    box-shadow: 8px 15px 25px rgba(0,0,0,0.3);
+    z-index: 10; /* Hover karne par note dusre notes ke upar aa jayega */
+}
+.sticky-note textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    resize: none;
+    outline: none;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'normal', cursive, sans-serif;
+    color: #2b1c15; /* Dark text for readable contrast on colorful notes */
+    line-height: 1.4;
+}
+.sticky-note textarea::placeholder {
+    color: rgba(43, 28, 21, 0.4);
+}
+.delete-note {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #1b5e20;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.sticky-note:hover .delete-note {
+    opacity: 1;
+}
+.delete-note:hover {
+    transform: scale(1.1);
+}
+
+/* ===== Animations ===== */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes textGlow {
+    0%, 100% { text-shadow: 0 0 15px rgba(255, 215, 0, 0.5); }
+    50% { text-shadow: 0 0 25px rgba(255, 215, 0, 0.9), 0 0 5px rgba(255, 255, 255, 0.8); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* ===== Mobile Responsiveness (For Phones & Tablets) ===== */
+@media (max-width: 768px) {
+    /* Main Dashboard Layout */
+    section.allElems {
+        padding: 20px;
+    }
+    .allElems header {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    .brand-title {
+        font-size: 38px;
+        line-height: 1.2;
+    }
+    #date-time-info {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        padding: 20px;
+    }
+    #date-time-info h2 {
+        font-size: 45px;
+    }
+    #date-time-info p {
+        font-size: 16px;
+    }
+    #weather-info {
+        text-align: center;
+        width: 100%;
+    }
+    .allElems .allFeatures {
+        justify-content: center;
+        gap: 25px;
+    }
+    
+    /* Full Pages General */
+    .fullElem {
+        padding: 20px;
+        padding-top: 90px; /* Space for Close button */
+        overflow-y: auto;
+    }
+    .back {
+        top: 20px;
+        right: 20px;
+    }
+
+    /* To-Do List Mobile */
+    .todo-list-fullpage h2 {
+        font-size: 40px;
+        text-align: center;
+        line-height: 1.2;
+    }
+    .todo-list-fullpage .todo-container {
+        flex-direction: column;
+        height: auto;
+        gap: 30px;
+    }
+    .todo-list-fullpage .todo-container .addTask,
+    .todo-list-fullpage .todo-container .allTask {
+        width: 100%;
+        height: auto;
+    }
+    .task {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .task h5 {
+        font-size: 24px;
+        flex-direction: column;
+    }
+
+    /* Daily Planner Mobile */
+    .daily-planner-fullpage h2 {
+        font-size: 35px;
+        text-align: center;
+        line-height: 1.2;
+    }
+    .planner-date {
+        text-align: center;
+    }
+    .daily-planner-fullpage .day-planner .day-planner-time {
+        width: 100%;
+    }
+
+    /* Motivation Mobile */
+    .motivation-container {
+        width: 95%;
+        padding: 40px 25px;
+    }
+    .motivation2 h2 {
+        font-size: 24px;
+    }
+
+    /* Pomodoro Timer Mobile */
+    .pomodoro-fullpage .pomo-timer {
+        width: 95%;
+        padding: 40px 20px;
+    }
+    .pomo-timer h1 {
+        font-size: 85px;
+    }
+    .pomo-timer button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    
+    /* Daily Goals Mobile */
+    .goals-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .goals-header h2 {
+        font-size: 40px;
+    }
+    .notes-container {
+        justify-content: center;
+    }
+}
+
+/* ===== Theme Toggle Button ===== */
+.theme-toggle-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.theme-toggle-btn:hover {
+    transform: scale(1.1) rotate(45deg);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* ===== LIGHT MODE STYLES ===== */
+body.light-mode {
+    background-color: #f0f2f5;
+}
+body.light-mode h1, body.light-mode h2, body.light-mode h3, 
+body.light-mode h4, body.light-mode h5, body.light-mode p, 
+body.light-mode label, body.light-mode textarea, body.light-mode input {
+    color: #333;
+}
+body.light-mode .brand-title {
+    color: #333;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+body.light-mode .brand-title .highlight {
+    color: #e67e22; /* Darker orange for visibility */
+    text-shadow: 0 0 10px rgba(230, 126, 34, 0.3);
+}
+body.light-mode section.allElems {
+    background: linear-gradient(-45deg, #fdfbfb, #ebedee, #e0c3fc, #8ec5fc);
+    background-size: 400% 400%;
+}
+body.light-mode .allElems header {
+    background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.4) 100%);
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+body.light-mode #date-time-info {
+    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+body.light-mode #date-time-info h2 { color: #e67e22; text-shadow: none; }
+body.light-mode #date-time-info p { color: #555; text-shadow: none; }
+body.light-mode #weather-info {
+    background-color: rgba(255,255,255,0.6);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+body.light-mode .elem {
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+body.light-mode .elem h2 {
+    color: #222;
+    background: rgba(255,255,255,0.8);
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+body.light-mode .todo-list-fullpage { background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); }
+body.light-mode .daily-planner-fullpage { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
+body.light-mode .pomodoro-fullpage { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+body.light-mode .daily-goals-fullpage { background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%); }
+body.light-mode .motivational-fullpage { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%) !important; }
+
+body.light-mode .todo-container .addTask, body.light-mode .todo-container .allTask,
+body.light-mode .day-planner, body.light-mode .motivation-container, body.light-mode .pomo-timer {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+body.light-mode .task { background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0,0,0,0.05); }
+body.light-mode input[type="text"], body.light-mode input[type="number"], body.light-mode textarea {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    color: #333 !important;
+}
+body.light-mode input:focus, body.light-mode textarea:focus {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1) !important; border-color: #8ec5fc !important;
+}
+body.light-mode .motivation-wrapper img { filter: brightness(0); opacity: 0.5; }
+body.light-mode button, body.light-mode button *, body.light-mode .session, body.light-mode .task h5 span { color: #fff !important; }
+body.light-mode .pomo-timer h1, body.light-mode .pomo-timer h2, body.light-mode .motivation2 h2 { color: #222 !important; }
+body.light-mode .theme-toggle-btn { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); }
+body.light-mode .theme-toggle-btn i { color: #f39c12 !important; }
+
+/* ===== Premium Custom Scrollbar ===== */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+body.light-mode ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.05); }
+body.light-mode ::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.2); }
+body.light-mode ::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.4); }
